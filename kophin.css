@@ -1,0 +1,210 @@
+body {
+  /* for now keep back ground like this, will change later */
+  background: #fcfcfc;
+  margin: 0;
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+/* nav bar */
+
+.header {
+  background: linear-gradient(0.25turn, #ebfff2, #94b49f, #94b49f);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  /* background-color: #94b49f; */
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  text-align: right;
+}
+
+.header li a:hover,
+.header .menu-btn:hover,
+.header .menu-icon:hover {
+  background-color: #68cc8b;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* title part */
+
+.title h1 {
+  display: block;
+  margin: 13% auto 3%;
+  text-align: center;
+  text-shadow: 2px 5px 5px #559b6e;
+}
+
+.title h4 {
+  display: block;
+  margin: 0% auto 13%;
+  text-align: center;
+  text-shadow: 1px 1px 5px #559b6e;
+}
+
+.title .line {
+  content: "";
+  background: linear-gradient(0.25turn, #ebfff2, #94b49f, #94b49f);
+  height: 4px;
+  width: 60%;
+  display: block;
+  margin: 0px auto 0px;
+}
+
+/* menu part */
+
+.menu {
+  margin: 6% auto 4%;
+  text-align: center;
+}
+
+.-fx-image-gal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0px auto;
+}
+
+.item {
+  width: 40%;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
+  margin: 4%;
+}
+
+.item h4 {
+  text-align: center;
+}
+
+.-fx-gal-item {
+  width: 80%;
+  height: 0;
+  padding-bottom: 80%;
+  overflow: hidden;
+
+  margin: 4% auto;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #559b6e;
+  border-width: 4px;
+  cursor: pointer;
+  background-color: #333;
+}
+
+.-fx-gal-item img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/* general part  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 90px;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 450;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+a {
+  font-size: 24px;
+}
